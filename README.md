@@ -2,7 +2,7 @@
 
 # Prerequisites.
 
-following softwares needs to be installed in the systems running below steps.
+following softwares needs to be installed in the system to run below steps.
   
   git
   

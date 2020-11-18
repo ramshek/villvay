@@ -62,25 +62,6 @@ assumption: Ansible control machine should deploy to Public Subnet of Vallvay VP
    
    1. Create a VPC Endpoint.
    
-   2. Attach S3 Bucket Policy.
+   2. Attach S3 Bucket Policy. (https://github.com/ramshek/villvay/blob/main/bucket-policy.json)
    
-# Bucker Policy
-
-{
-	"Version": "2012-10-17",
-	"Id": "Policy123456789",
-	"Statement": [
-		{
-			"Sid": "Stmt123456789",
-			"Effect": "Deny",
-			"Principal": "*",
-			"Action": "s3:*",
-			"Resource": "arn:aws:s3:::villvaybucket/*",
-			"Condition": {
-				"StringNotEquals": {
-					"aws:sourceVpc": "villvay-vpc-id"
-				}
-			}
-		}
-	]
-}
+   

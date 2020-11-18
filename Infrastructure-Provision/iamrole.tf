@@ -49,8 +49,8 @@ resource "aws_iam_role_policy" "villvay_iam_role_policy" {
 EOF
 }
 
-resource "aws_s3_bucket" "villvay_bucket-01" {
-    bucket = "villvay-bucket-01"
+resource "aws_s3_bucket" "villvaybucket" {
+    bucket = "villvaybucket"
     acl = "private"
     versioning {
             enabled = true

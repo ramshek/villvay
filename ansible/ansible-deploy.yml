@@ -1,0 +1,19 @@
+---
+ - name: new app deployment
+   hosts: all
+   gather_facts: true
+   become: true
+   tasks:
+    - name: checkout git repo
+      git:
+        repo: https://github.com/ramshek/springboot.git
+        clone: no
+        dest: /root/villvay/springboot
+        update: yes
+        force: yes
+    - name: build app
+      command: mvn clean package
+      args:
+         chdir: /root/villvay/springboot
+    - name: re-start app
+      command: sh /root/villvay/springboot/start.sh

@@ -1,0 +1,18 @@
+{
+    "Version": "2012-10-17",
+    "Id": "Policy123456789",
+    "Statement": [
+        {
+            "Sid": "Stmt123456789",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::villvaybucket/*",
+            "Condition": {
+                "StringNotEquals": {
+                    "aws:sourceVpc": "villvay-vpc-id"
+                }
+            }
+        }
+    ]
+}
